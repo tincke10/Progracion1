@@ -1,6 +1,5 @@
 # En una institución educativa, el director quiere organizar las celebraciones de cumpleaños de los estudiantes de manera más eficiente. Para ello, necesita saber en qué meses del año se concentran la mayor cantidad de cumpleaños y, por el contrario, en qué meses no hay cumpleaños de estudiantes. Con esta información, el director podrá planificar mejor las actividades, agrupando las celebraciones en los meses más concurridos y evitando las festividades en aquellos meses donde no hay ningún cumpleaños. Como encargado del sistema de información de la institución, se te ha solicitado desarrollar un programa que permita registrar el mes de cumpleaños de cada estudiante. Además, el programa debe ser capaz de: Determinar cuál o cuáles son los meses con mayor cantidad de cumpleaños. Identificar los meses en los que no se registren cumpleaños de ningún estudiante.
 
-# Step 1: Define a function to register the month of each student's birthday
 def register_birthdays():
     birthdays = {}
     for month in range(1, 13):
@@ -20,18 +19,16 @@ def register_birthdays():
     
     return birthdays
 
-# Step 2: Define a function to determine the month(s) with the highest number of birthdays
 def find_max_birthdays(birthdays):
     max_birthdays = max(birthdays.values())
     max_months = [month for month, count in birthdays.items() if count == max_birthdays]
     return max_months, max_birthdays
 
-# Step 3: Define a function to identify months with no birthdays
+
 def find_no_birthdays(birthdays):
     no_birthdays = [month for month, count in birthdays.items() if count == 0]
     return no_birthdays
 
-# Step 4: Implement the main logic to interact with the user and display results
 def main():
     birthdays = register_birthdays()
     max_months, max_birthdays = find_max_birthdays(birthdays)
